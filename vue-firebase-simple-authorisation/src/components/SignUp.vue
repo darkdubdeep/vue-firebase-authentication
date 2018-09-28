@@ -55,10 +55,17 @@ button {
   border-radius: 5px;
   outline: 0;
   cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+button:hover {
+  -webkit-box-shadow: -1px 4px 56px 1px rgba(66, 185, 131, 0.53);
+  -moz-box-shadow: -1px 4px 56px 1px rgba(66, 185, 131, 0.53);
+  box-shadow: -1px 4px 56px 1px rgba(66, 185, 131, 0.53);
 }
 span {
   display: block;
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 13px;
 }
 </style>

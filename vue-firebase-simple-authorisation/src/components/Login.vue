@@ -57,8 +57,16 @@ button {
   border-radius: 5px;
   outline: 0;
   cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+button:hover {
+  -webkit-box-shadow: -1px 4px 56px 1px rgba(66, 185, 131, 0.53);
+  -moz-box-shadow: -1px 4px 56px 1px rgba(66, 185, 131, 0.53);
+  box-shadow: -1px 4px 56px 1px rgba(66, 185, 131, 0.53);
 }
 p {
+  margin-top: 30px;
   font-size: 13px;
 }
 p a {
