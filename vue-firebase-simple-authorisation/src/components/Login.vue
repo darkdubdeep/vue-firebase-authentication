@@ -8,13 +8,13 @@
 </div>
 </template>
 <script>
-import firebase from "firebase";
+import firebase from 'firebase';
 export default {
-  name: "login",
+  name: 'login',
   data: function() {
     return {
-      email: "",
-      password: ""
+      email: '',
+      password: ''
     };
   },
   methods: {
@@ -23,16 +23,16 @@ export default {
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
         .then(
-          function(user) {
-            alert("You are connected!");
+          user => {
+            this.$router.replace('hello');
           },
-          function(err) {
-            alert("wrong data");
+          err => {
+            alert('wrong data');
           }
         );
     },
     goToWellkomePage: function() {
-      this.$router.replace("hello");
+      this.$router.replace('hello');
     }
   }
 };

@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import firebase from "firebase";
+import firebase from 'firebase';
 export default {
-  name: "singUp",
+  name: 'singUp',
   data: function() {
     return {};
   },
@@ -21,10 +21,10 @@ export default {
         .auth()
         .createUserWithEmailAndPassword(this.email, this.password)
         .then(
-          function(user) {
-            alert("Your account has been created !");
+          user => {
+            alert('Your account has been created !');
           },
-          function(err) {
+          err => {
             alert(err.message);
           }
         );
