@@ -13,7 +13,10 @@ import firebase from 'firebase';
 export default {
   name: 'singUp',
   data: function() {
-    return {};
+    return {
+      email: '',
+      password: ''
+    };
   },
   methods: {
     createAccount: function() {
@@ -43,8 +46,14 @@ input {
   padding: 15px;
 }
 button {
+  padding: 20px;
   margin-top: 10px;
-  width: 10%;
+  width: 150px;
+  background: #42b983;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: 0;
   cursor: pointer;
 }
 span {

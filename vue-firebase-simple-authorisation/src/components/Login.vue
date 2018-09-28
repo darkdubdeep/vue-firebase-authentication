@@ -1,6 +1,6 @@
 <template>
 <div class="login">
-    <h3>Sign in</h3>
+    <h5>Sign in</h5>
     <input type="text" v-model="email" placeholder="Email"> <br>
     <input type="password" v-model="password" placeholder="Password"> <br>
     <button @click="signIn()">Connetction</button>
@@ -48,12 +48,17 @@ input {
   padding: 15px;
 }
 button {
-  margin-top: 20px;
-  width: 10%;
+  padding: 20px;
+  margin-top: 10px;
+  width: 150px;
+  background: #42b983;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  outline: 0;
   cursor: pointer;
 }
 p {
-  margin-top: 40px;
   font-size: 13px;
 }
 p a {
