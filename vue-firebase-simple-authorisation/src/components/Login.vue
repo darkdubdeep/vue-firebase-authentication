@@ -46,6 +46,18 @@ input {
   margin: 10px 0;
   width: 20%;
   padding: 15px;
+  border: solid rgba(66, 185, 131, 0.3);
+}
+input:focus {
+  border: solid rgba(66, 185, 131, 0.5) !important;
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
 }
 button {
   padding: 20px;
@@ -70,7 +82,15 @@ p {
   font-size: 13px;
 }
 p a {
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
+  color: #42b983;
+  transition: 0.3s;
+}
+p a:hover {
+  color: #0e7a55;
+}
+p a:visited {
+  color: #42b983;
 }
 </style>
