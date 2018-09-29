@@ -1,5 +1,12 @@
 <template>
 <div class="login">
+    <div 
+    v-if="loginProcessSarted === true" 
+    class="login-spinner-container">
+      <img 
+      src="./../assets/login-spinner.gif" 
+      class="vue-logo">
+      </div>
     <h5>Sign in</h5>
     <input type="text" v-model="email" placeholder="Email"> <br>
     <input type="password" v-model="password" placeholder="Password"> <br>
@@ -14,11 +21,13 @@ export default {
   data: function() {
     return {
       email: '',
-      password: ''
+      password: '',
+      loginProcessSarted: false
     };
   },
   methods: {
     signIn: function() {
+      this.loginProcessSarted = true;
       firebase
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
@@ -28,6 +37,7 @@ export default {
           },
           err => {
             alert('wrong data');
+            this.loginProcessSarted = false;
           }
         );
     },
@@ -92,5 +102,16 @@ p a:hover {
 }
 p a:visited {
   color: #42b983;
+}
+
+.login-spinner-container {
+  width: 90%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  background: #fff;
 }
 </style>
